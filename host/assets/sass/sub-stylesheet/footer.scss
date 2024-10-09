@@ -1,0 +1,186 @@
+.footer {
+  &__top{
+    background: url("..//..//img/pageone/footerimg/footerbg.jpg");
+  }
+ 
+  &__contact {
+    @extend %white-color;
+    .logo {
+      width: 148px;
+    }
+    p {
+      @extend %mb-0, %mt-25, %white-color;
+    }
+    .allcontact {
+      @include margin-top(32px);
+      .contactinner {
+        &:nth-child(2) {
+          @extend %mt-15, %mb-15;
+        }
+        @extend %flex, %align-items-center;
+        i {
+          width: 15px;
+        }
+        p {
+          @extend %m-0, %pl-15;
+          width: calc(100% - 15px);
+        }
+      }
+    }
+  }
+  &__ul {
+    .bottomcontent {
+      ul {        
+        @include breakpoint(esmm) {
+          @include breakpoint(max-md) {
+            max-width: 350px;
+          }
+        }
+        @extend %flex;
+        padding-left: 20px;
+        @include breakpoint(md){
+          @include padding-left(15px);
+        }
+        li {
+          list-style: disc;
+          font-size: 16px;
+          @extend %mt-20, %white-color, %text-600;
+          width: calc(100% / 2 - 30px);
+          &:nth-child(even) {
+            @include margin-left(60px);
+          }
+          &:nth-child(1) {
+            @extend %mt-0;
+          }
+          &:nth-child(2) {
+            @extend %mt-0;
+          }
+          a {
+            @extend %white-color, %text-decoration;
+          }
+        }
+      }
+    }
+  }
+  &__news {
+    .newsinner {
+      @extend %flex;
+      flex-direction: column;
+      gap: 25px;
+      &__item {        
+        @extend %flex, %align-items-center;
+        .thum {
+          width: 95px;
+          @extend %pr-15;
+          a {
+            img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+        .content {
+          width: calc(100% - 95px);
+          a {
+            @extend %white-color, %mb-0, %text-600, %d-block, %text-decoration;            
+            @include font-size(16px);
+            @extend %text-2;
+          }
+          span {
+            @extend %white-color, %pt-5, %d-block;
+          }
+        }
+      }
+    }
+    &--newsblog {
+      @extend %bg-white, %mt-30, %p-20;      
+      .newsinner {
+        .content {          
+          span {
+            color: #70717b;
+          }
+        }
+      }
+    }
+  }
+  &__newsletter {
+    p {
+      @extend %white-color;
+    }
+    .mailsending {
+      max-width: 312px;
+      background: rgba(255, 255, 255, 0.1);
+      @extend %flex, %align-items-center, %mt-30;
+      .main_iner {
+        width: calc(100% - 60px);
+        @extend %flex, %align-items-center;
+        padding-left: 20px;
+        i {
+          width: 10px;
+          @extend %white-color;
+        }
+        input {
+          width: calc(100% - 10px);
+          background: transparent;
+          border: transparent;
+          @extend %white-color;
+        }
+        &::placeholder {
+          @extend %white-color, %text-400;
+        }
+      }
+      .rocket {
+        width: 60px;
+        padding: 15px;        
+        @extend %text-center, %pointer, %border-none-im;
+        background:#027DF7;        
+      }
+    }
+    .payment {
+      @include margin-top(30px);
+      h6 {
+        @extend %white-color;
+        font-size: 18px;
+      }
+      &__all {
+        @extend %flex, %align-items-center, %mt-20;
+      }
+      &__item {
+        @extend %mr-20;
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+        @include breakpoint(xl) {
+          @include breakpoint(max-xxl) {
+            margin-right: 10px;
+            &:nth-child(1) {
+              width: 50px;
+            }
+            &:nth-child(2) {
+              width: 38px;
+            }
+            &:nth-child(3) {
+              width: 55px;
+            }
+            &:nth-child(4) {
+              width: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+ &__bottom{
+  @extend %text-center;
+  background: #031A75;
+  @include padding(30px);
+  span{
+    @extend %white-color, %text-500;
+    i{
+      @extend %mr-5;
+    }
+  }
+ }
+
+}

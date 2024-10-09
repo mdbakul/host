@@ -1,0 +1,87 @@
+.service{
+   &__allitem{
+    @extend %flex;
+    gap: 25px;
+    flex-direction: column;
+   } 
+   &__item{    
+    @include padding(24px 35px);
+    @extend %flex;
+    .icon{
+        @extend %wd-70, %hd-70, %line-height-70,%text-center;
+        background: #F6F9FF;
+        @include border-radius(50%);        
+    }
+    .text{
+        width: calc(100% - 70px);
+        @include padding-left(25px);
+        h6{
+            @include margin-bottom(8px);
+            a{
+                @extend %text-decoration;
+            }
+        }
+        
+    }
+    &--item2P2{
+        @include padding(0);  
+        .icon{
+            background: #027DF7;
+        }
+        &:hover{
+            .icon{
+                img{
+                    transform: rotateY(180deg);
+                }
+            }
+            .text{
+                h6{
+                    a{
+                        color: #027DF7;
+                    }
+                }
+            }
+
+        }
+    }
+    &:hover{
+        .icon{
+            img{
+              transform: scale(1.1);
+            }
+        }
+        .text{
+            h6{
+                a{
+                color: $theme;
+                }
+            }
+        }
+    }
+   }
+   &--service2{
+    @extend %bg-white;
+   }
+   &__leftimg{
+    @include margin-right(100px);
+   }
+   &__btn{
+    a{
+        @include padding(15px 45.5px);
+    }
+   }
+   &__header{
+    h3{
+      @include breakpoint(max-lg){
+        max-width: 700px;
+      }  
+    }
+   }  
+
+   .row {
+       @include breakpoint(max-lg){
+        flex-direction: column-reverse;
+    }
+   }
+   
+}

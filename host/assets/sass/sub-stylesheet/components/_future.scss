@@ -1,0 +1,75 @@
+.feture{ 
+    &__inner{   
+        @extend %transition;   
+        @include padding(45px 25px);               
+        @extend %p-rel;
+        z-index: 10;        
+        // box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+        .icon{
+            @extend %wd-80, %hd-80, %line-height-80, %auto, %text-center;
+            background: #F6F9FF;
+            @include border-radius(40px);     
+            img{
+                @include transition(0.7s);           
+                
+            }                           
+        }
+        .text{   
+            @include margin-top(20px);         
+            h6{
+             @extend %text-capitalize, %text-center, %transition, %text-600;
+             @include margin-bottom(15px);
+            }
+            p{
+            @extend %text-center, %transition; 
+            @include breakpoint(md){
+                @include breakpoint(max-xl){
+                    max-width: 256px;
+                    margin: auto;
+                    }
+                }
+            }
+        }
+              
+        &:hover{
+            box-shadow: none;
+            .icon{
+                img{
+                    transform: rotateY(180deg);
+                }
+            }
+             
+        }
+        &--innerhostpage{
+           background: $body-color; 
+        }        
+    }   
+    
+    .row{
+        .col-md-6{
+            &:nth-child(2){
+                 .feture__inner{
+                    &:after{
+                        background-image: url("..//..//..//img/home-1/feture/bg/img1.jpg");
+                    }
+                 }
+            }
+            &:nth-child(3){
+                .feture__inner{
+                   &:after{
+                       background-image: url("..//..//..//img/home-1/feture/bg/img2.jpg");
+                   }
+                }
+           }
+           &:nth-child(4){
+            .feture__inner{
+               &:after{
+                   background-image: url("..//..//..//img/home-1/feture/bg/img3.jpg");
+               }
+            }
+       }
+
+        }
+    }
+}
+

@@ -1,0 +1,30 @@
+.cloud{
+    @include padding(100px 0);
+    &__header{
+        h3{
+            max-width: 600px;
+        }
+        p{
+            max-width: 590px;
+            @include margin-bottom(35px);
+        }
+        ul{
+            @extend %mp-0-im, %flex;
+            flex-direction: column;
+            gap: 10px;             
+            li{
+                @extend %list-none;
+                i{
+                    color: #027DF7;
+                    @extend %mr-5;
+                }
+            }
+        }
+    }    
+    &__top{
+        @include margin-bottom(50px);
+        @include breakpoint(xl){
+        @include margin-bottom(100px);   
+        }
+    }
+}

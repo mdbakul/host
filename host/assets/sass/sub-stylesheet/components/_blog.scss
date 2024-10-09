@@ -1,0 +1,145 @@
+.blog{   
+   &__inner{
+    &:hover{
+       .blog__thum{
+        a{
+            img{
+                transform: scale(1.1);
+            }
+        }
+       } 
+    }
+   }
+   &__thum{    
+            @extend %hidden, %w-100-im;    
+            a{           
+                img{
+                    @extend %w-100-im;
+                }
+            }         
+   }    
+   &__text{
+    @extend %bg-white;
+    @include padding(25px 30px);
+    @include border-radius(0 0 4px 4px);
+    .header{
+        h6{
+            a{
+                @extend %text-600, %text-decoration, %text-2;
+                @include line-height(32px);
+            }
+        }
+    }
+    .coments{
+        @include padding-top(22px);
+        @include margin-top(22px);
+        border-top: 1px solid #E6E7E8;
+        ul{
+            @extend %mp-0-im, %flex,%justify-between; 
+            li{
+                @extend %list-none, %mp-0-im, %text-500;
+                @include font-size(14px);   
+                color: #70717B;    
+                i{
+                    @extend %mr-10;
+                    color: #027DF7;
+                }
+            }
+        }
+    }
+    &:hover{
+        .header{
+            h6{
+                a{
+                    color: #027DF7;
+                }
+            }
+        }
+    }
+
+   }
+   &__innerpage2{
+        @extend %hidden;
+        .thumb{
+            @extend %hidden;
+            a{
+                img{
+                    @extend %w-100;
+                }
+            }
+        }        
+        .content{
+            @include padding(25px);
+            .text{
+                h6{     
+                    @extend %text-2;               
+                    a{
+                        @extend %text-decoration, %text-2;
+                    }
+                }
+                ul{
+                    @extend %pl-0-im, %flex, %align-items-center,%my-15; 
+                    gap: 20px;   
+                    @include breakpoint(lg){
+                    gap: 40px;  
+
+                    }                                  
+                    li{
+                        @extend %list-none;
+                        i{
+                            @include font-size(15px);
+                            @extend %mr-10;
+                            color: #027DF7;
+                        }
+                    }
+                }
+            }  
+            .blogbtn{
+                a{
+                  border: 1px solid #027DF7; 
+                  @extend %text-color;                 
+                  
+                }
+            }
+        }
+        &:hover{     
+           .thumb{
+                a{
+                    img{
+                       transform: scale(1.1); 
+                    }
+                }
+            }       
+           .content{
+            .text{
+                h6{
+                    a{
+                        color: #027DF7;
+                    }
+                }
+            }
+            
+           }
+        } 
+    &--innerblogsingle{
+      .content{
+          @include breakpoint(xl){
+            margin: -20px 20px 0 20px;
+        } 
+        @extend %z-index-1, %p-rel;
+        .text{
+            h4{
+                a{
+                   @extend %text-decoration-im, %text-2; 
+                }
+            }
+            ul{
+                @include breakpoint(max-sm){
+                    gap: 15px;
+                }
+            }
+        }
+      }
+    }
+   }   
+}

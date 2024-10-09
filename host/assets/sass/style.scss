@@ -1,0 +1,34 @@
+// Core variables and mixins
+@import "sub-stylesheet/_variables";
+@import "sub-stylesheet/_mixins";
+@import "sub-stylesheet/_extend";
+@import "sub-stylesheet/rfs";
+
+
+
+// Core CSS
+@import "sub-stylesheet/_normalize";
+@import "sub-stylesheet/_global";
+@import "sub-stylesheet/_header";
+@import "sub-stylesheet/_banner";
+@import "sub-stylesheet/footer";
+
+
+//project css 
+@import "sub-stylesheet/components/_domine";
+@import "sub-stylesheet/components/_future";
+@import "sub-stylesheet/components/_pricing";
+@import "sub-stylesheet/components/_service";
+@import "sub-stylesheet/components/_support";
+@import "sub-stylesheet/components/_allbranch";
+@import "sub-stylesheet/components/_testmoinal";
+@import "sub-stylesheet/components/_blog";
+@import "sub-stylesheet/components/_question";
+@import "sub-stylesheet/components/_hosting";
+@import "sub-stylesheet/components/_counter";
+@import "sub-stylesheet/components/_cloud";
+@import "sub-stylesheet/components/_condition";
+@import "sub-stylesheet/components/_singup";
+@import "sub-stylesheet/components/_blogsingle";
+@import "sub-stylesheet/components/_contact";
+

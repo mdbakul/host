@@ -1,0 +1,223 @@
+.accordion-item {  
+    @extend %mb-25, %border-none-im;
+    &:last-child{
+      @extend %mb-0;
+    }
+  
+    &:nth-child(6) {
+      @extend %mb-0;
+    }
+    @include breakpoint(lg){
+      max-width: 593px;
+    }  
+    @include padding(20px 25px);
+    @include add-prefix(border-radius, 4px);  
+
+
+    .accordion-button {
+      @extend %p-0,
+      %mb-0,
+      %text-600,
+      %bgtransprant,
+      %text-color,      
+      %justify-between-im, %pointer, %text-capitalize;   
+  
+      .plus-icon {
+        @extend %wd-40,
+        %hd-40,
+        %bgtheme,
+        %border-radius-4,
+        %p-rel,
+        %transition;
+        margin-left: auto;  
+        &:active {
+          @extend %bgtheme;
+        }
+  
+        &:after {
+          @extend %abs,
+          %top-50,
+          %left-50;
+          width: 14px;
+          height: 2px;
+          @extend %bg-white;
+          transform: translate(-50%, -50%);
+        }  
+        &:before {
+          @extend %abs,
+          %top-50,
+          %left-50;
+          width: 2px;
+          height: 14px;
+          @extend %bg-white;
+          transform: translate(-50%, -50%);
+        }  
+      }
+  
+      &:after {
+        @extend %d-none;
+      }
+  
+      @include font-size(22px);
+  
+      &:focus {
+        border-color: none;
+        box-shadow: none;
+      }
+  
+    }
+  
+    .accordion-body {
+     @include padding(10px 0);
+      p {
+        @extend %m-0,
+        %text-400;
+        max-width: 475px;
+        color: #555;
+  
+      }
+    }
+  
+    .accordion-button:not(.collapsed) {
+      box-shadow: none;
+      @extend %transition;
+      color: #027DF7;
+      border-radius: inherit !important;
+  
+      .plus-icon {
+        @extend  %transition;
+        background: #027DF7;  
+        &:before {
+          width: 14px;
+          height: 2px;
+        }
+  
+      }
+    }  
+
+  &--item2{
+    background: $body-color;
+  }
+
+  &--itemserviceP {
+    outline: 1px solid #027DF7;
+    border-radius: 0 !important;
+    max-width: 872px;    
+    @include padding(20px);
+
+    @include breakpoint(md){
+      @include padding(20px 30px);
+    }    
+    .accordion-button{ 
+      .left{
+        @extend %flex, %align-items-center;
+        gap: 20px;
+        @include font-size(20px);
+        font-weight: 600;
+        color: #2A2A2A;
+        @include breakpoint(max-lg) {
+          margin-bottom: 15px;
+        }
+        .questionmark{
+          @extend %wd-45, %hd-45, %bg-black, %text-center, %transition, %line-height-45;         
+
+          @include breakpoint(lg){
+            @include breakpoint(max-xl){
+              display:  none !important;
+            }
+          }
+          @include border-radius(25px);
+          i{
+            @extend %white-color, %wd-20, %hd-20, %line-height-20;
+            border: 1px solid #fff;
+            @include border-radius(10px);
+            @include font-size(12px);  
+          }
+        }
+      } 
+       .plus{
+        @extend %p-rel;
+          &:after{
+            width: 14px;
+            height: 2px;
+            @extend %bg-black, %abs, %top-50, %left-0, %w-50, %h-50;
+            transform: translate(-50%, -50%);
+          }
+          &::before{
+            width: 2px;
+            height: 14px;
+            @extend %bg-black, %abs, %top-50, %left-0, %w-50, %h-50;
+            transform: translate(-50%, -50%);
+            
+          }
+       }   
+    }
+    .accordion-body{
+      @include breakpoint(sm){
+        @include padding(10px 0px 0px 60px);
+        
+      }
+      @include breakpoint(lg){
+        @include breakpoint(max-xl){
+          @include padding(10px 0px 0px 0px);
+        }
+      }
+
+      p{
+        max-width: 632px;
+      }
+    }
+    .accordion-button:not(.collapsed){  
+      .left{
+        color: #027DF7 !important;
+      }   
+      .questionmark{
+       background: #027DF7;
+      }
+      .plus{
+        &::before{
+          width: 14px;
+          height: 2px;  
+        }
+        &::after{
+          background: #027DF7;      
+
+        }
+      }
+    }
+
+    // &:focus{
+    //   outline: 1px solid #fff !important;
+    // }
+  }  
+}
+  
+
+.question{
+  &__headerpage1{
+    h3{
+      @include breakpoint(max-lg){
+        max-width: 700px;
+      }
+    }
+  }
+  &__header{
+    h3{
+      
+      @include breakpoint(lg){
+        max-width: 500px;
+      }
+    }
+  }
+  &__rightimg{
+    img{
+      @extend %w-100;
+    }
+  }
+}
+
+.popularquestion{
+  &__header{
+    @include padding-bottom(50px);
+  }
+}

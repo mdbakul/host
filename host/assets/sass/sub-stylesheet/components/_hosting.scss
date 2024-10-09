@@ -1,0 +1,55 @@
+.hosting{
+    &__inner{
+        @extend %bg-white;
+        @include padding(35px 25px);
+        .img{
+            @extend %wd-70, %hd-70, %line-height-70,%text-center, %transition;
+            @include border-radius(50%);
+            @include margin-bottom(28px);
+            background: #F6F9FF;
+        }
+        .text{            
+            h6{
+                a{
+                    @extend %text-decoration, %d-inline-block;
+                    @include margin-bottom(20px);   
+                }
+            }            
+            .icon{
+                a{
+                    background: #E3F1FF;
+                    @include margin-top(22px);
+                    @extend %wd-40, %hd-40, %line-height-40, %text-center, %transition, %d-inline-block;
+                    @include border-radius(50%);
+                }                
+            }
+        }
+
+        &:hover{ 
+            .img{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            .text{
+                h6{
+                    a{
+                        color: #027DF7;
+                    }
+                }
+            }        
+            .icon{
+               a{
+                background: #027DF7; 
+               }
+               i{
+                @extend %white-color;
+               }
+            }
+
+        }
+        &--innerpage3{
+            background: $body-color;
+        }
+    }
+}

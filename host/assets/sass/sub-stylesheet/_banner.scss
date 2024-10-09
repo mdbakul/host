@@ -1,0 +1,157 @@
+.bannerone{
+    .banner{
+        @extend %p-rel;
+        &__bg {
+          @include padding-block(230px);    
+          background-repeat: no-repeat;
+          @extend %hidden, %bg-cover;
+          @include breakpoint(lg) {
+              background-size: cover !important;
+              background-position: center !important;
+            }
+          @extend %w-100, %p-rel;           
+          .leftimg{
+              @extend %abs;
+              top: 55%;
+              left: 0%;              
+              @include breakpoint(xxxxl){
+                left: 3%;
+                top: 38%;
+              }    
+              @include breakpoint(max-xxxxl){
+                width: 30%;
+              }          
+          }
+          .rightimg{
+              @extend %abs;
+              top: 55%;
+              right:0%; 
+              @include breakpoint(xxxxl){
+                right:3%;
+                top: 38%;
+              }    
+              @include breakpoint(max-xxxxl){
+                width: 25%;
+              }           
+            }  
+           .rightimgpage3{
+              @extend %abs;
+              top: 30%;
+              right:-15%;
+              @include breakpoint(xxl){                
+                right:10%; 
+              }   
+              @include breakpoint(xxxxl){
+                top: 15%;
+                right:10%; 
+              }           
+            img{
+              @include breakpoint(max-xxxxl){
+                width: 70%;
+              }
+            }
+          }        
+        }
+        &__content {
+          @extend %p-rel;
+          h6 {
+            @extend %text-600, %white-color;
+            letter-spacing: 2.4px;
+            @include margin-bottom(10px);
+            @include transform(translateY(-300px));             
+            @include transition(2.3s);
+          }
+          h3 {
+            max-width: 614px;
+            @extend %white-color, %text-700;
+            @include font-size(72px);
+            font-family: $font;
+            line-height: 1.1 !important;
+            @include margin-bottom(20px);
+            @include transform(translateY(-300px));            
+            @include transition(2.3s);
+          }
+          p {
+            max-width: 563px;
+            @extend %white-color;
+            @include margin-bottom(10px);
+            @include transform(translateY(1000px));           
+            @include transition(2.3s);
+          }
+          .bannerbtn {
+            @extend %flex, %align-items-center;
+            @include transform(translateY(1000px));           
+            @include transition(2.3s);
+            gap: 15px;
+            @include breakpoint(sm) {
+              gap: 30px;
+            }
+            a { 
+              @extend %text-600;              
+            }
+          }
+          &--style2 {
+            @extend %text-center;
+            h3 {
+              @extend %marauto;
+              max-width: 871px;
+              @include breakpoint(max-lg){
+                @include font-size(60px);
+                line-height: 1.2 !important;
+              }
+            }
+            p {        
+              @extend  %marauto-im;
+              @include padding-bottom(15px);
+            }
+            .bannerbtn {
+              @extend %justify-center;
+            }
+          }
+        }
+        &__pagination {
+          @extend %p-abs, %text-center;
+          bottom: 50px !important;
+          z-index: 1;    
+          @include breakpoint(sm) {
+            bottom: 75px !important;
+          }
+          &--page3 {
+            bottom: 40px !important;
+          }
+        }          
+        .swiper-slide-active {
+            .banner__content {
+              h6 {
+                @include transform(translateY(0px));
+                               
+              }
+              h3 {
+                @include transform(translateY(0px));
+                                
+              }
+              p {
+                @include transform(translateY(0px));
+                              
+              }
+              .bannerbtn {
+                @include transform(translateY(0px));
+                               
+              }
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff; 
+    @include add-prefix(border-radius, 50%);  
+    @extend %bgtransprant, %opacity-1;
+}
+
+.swiper-pagination-bullet-active {
+    border: transparent;
+    background: linear-gradient(99deg, #027df7 25.27%, #1a44f2 96.39%);
+}

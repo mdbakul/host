@@ -1,0 +1,60 @@
+.support{
+    @extend %bgtheme, %p-rel;  
+    @include padding(100px 0);
+
+    @include breakpoint(md){
+        @include padding(75px);
+    }
+    
+    &__allitem{
+        @extend %flex;
+        flex-direction: column;
+        gap: 40px;
+        .item{
+            @extend %flex, %align-items-center;
+            gap: 15px;
+            .icon{
+                @extend %wd-55, %hd-55, %border-radius-4, %bg-white, %text-center, %line-height-55;
+                img{
+
+                }
+            }
+            .text{
+                p{
+                    @extend %white-color;
+                }
+                span{
+                    @extend %white-color, %text-600;
+                    
+                }
+            }
+        }
+    }
+
+    &__header{
+        @include padding-bottom(40px);
+        h3{
+            max-width: 700px;
+            @include breakpoint(lg){
+                max-width: 550px;
+            }
+            @extend %white-color;
+            @include line-height(44px);
+        }
+        p{
+            @extend %white-color; 
+            max-width: 521px;           
+        }
+    }
+    &__rightimg{
+        @extend %abs;
+        bottom: 0;
+        left: 50%;     
+        img{            
+            @include breakpoint(max-xl){
+                width: 50%;
+            }
+        }  
+    }
+    
+}

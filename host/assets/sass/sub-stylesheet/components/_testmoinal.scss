@@ -1,0 +1,205 @@
+.testmonial2 {
+    @extend %bg-white;
+
+    &__inner {
+        background:$body-color;
+        @include padding(40px 25px);
+        @include border-radius(5px);
+        .thum {
+            @extend %wd-70,
+            %hd-70,
+            %bg-white,
+            %text-center,
+            %mb-25,
+            %p-rel;
+            line-height: 75px;
+            @include border-radius(35px);
+            z-index: 1;
+            i {
+                @include font-size(28px);
+                color: #027DF7;
+
+            }
+
+            &:after {
+                @extend %abs,
+                %top-0,
+                %left-0,
+                %w-100,
+                %h-100,                
+                %transition;
+                background: #027DF7;
+                @include border-radius(50%);
+                z-index: -1;
+                transform: scale(0);
+
+            }
+
+        }
+
+        &:hover {
+            .thum {
+                &:after {
+                    transform: scale(1);
+                    @extend %transition;
+                }
+
+                i {
+                    @extend %white-color;
+                }
+            }
+            .testmonial2__content{
+                h6{
+                    color: #027DF7;  
+                }
+            }
+        }
+    }
+
+    &__content {
+        .profile {
+            @extend %mb-20;
+
+            h6 {
+                @extend %text-color,
+                %mb-0;
+            }
+
+            span {
+                color: #555;
+                @extend %text-400,
+                %font-16;
+            }
+
+            ul {
+                @extend %flex, %list-none, %mp-0-im;
+                gap: 4px;
+                li {
+                    i {
+                         color: #027DF7;
+                        @extend %font-12, %list-none, %mp-0-im;
+                    }
+                }
+            }
+        }
+
+        p {
+            @extend %mb-0;
+        }
+    }
+}
+
+.testmonial { 
+    &__heading {
+        h3 {
+            @extend %white-color;
+        }
+
+        p {
+            @extend %white-color;
+        }
+    }  
+    &__item {
+        @extend %flex,
+        %bg-white,
+        %align-items-center,
+        %border-radius-4;
+        gap: 35px;
+        flex-direction: column;
+
+        @include breakpoint(sm) {
+            flex-direction: row;
+        }
+
+        @include breakpoint(lg) {
+            @include breakpoint(max-mlg) {
+                max-width: 695px;
+                margin: auto;
+            }
+        }
+
+        @include padding(30px 15px);
+
+        @include breakpoint(sm) {
+            @include padding(30px);
+        }
+
+        @include breakpoint(mlg) {
+            @include breakpoint(max-lxxl) {
+                @include padding(30px 15px);
+            }
+        }
+
+        .thum {
+            @extend %wh-100,
+            %hd-100,
+            %bg-white,
+            %white-color,
+            %p-rel;
+            @include border-radius(50px);
+            @include breakpoint(max-sm) {
+                margin: auto;
+            }          
+
+            img {
+                @extend %w-100;
+            }
+            .quode {
+                @extend %wd-40,
+                %hd-40,
+                %text-center,
+                %left-50,
+                %abs;
+                background: #027DF7;
+                @include transform(translateX(-50%));
+                top: 80%;
+                @include line-height(40px);
+                @include border-radius(20px);
+                outline: 4px solid #fff;
+
+                i {
+                    @extend %font-20;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+    }
+
+    &__content {
+        @extend %w-100;
+        
+        @include breakpoint(sm) {
+            width: calc(100% - 100px - 35px);
+        }
+
+        .profile {
+            @extend %flex,
+            %align-items-center,
+            %justify-between;
+            @include margin-top(20px);
+            .name {
+                h6 {
+                    @extend %mb-0
+                }
+
+                span {
+                    @extend %text-400;
+                }
+            }
+            .star {
+                ul {
+                    @extend %flex;
+                    gap: 2px;
+                    li {
+                        @extend %list-none;
+                        i {                            
+                            @include font-size(15px);
+                            color: #027DF7;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,146 @@
+.domine{    
+    &__inner{
+        @include margin-top(-55px);
+        z-index: 1;
+        @extend %p-rel, %bg-white;
+        box-shadow: 0px 0px 24px 0px rgba(179, 181, 191, 0.42);
+        @extend %text-center;
+        @include border-radius(5px);
+        @include padding(20px 10px); 
+
+        @include breakpoint(sm){
+        @include padding(60px); 
+        }
+        @include breakpoint(xxl){
+        @include padding(60px 74px); 
+        }     
+        h3{
+         @extend %font1, %text-700;   
+        }
+
+        .searchbar{
+            box-shadow: 0px 0px 24px 0px rgba(179, 181, 191, 0.42);
+            @include border-radius(5px 0 0 5px);
+            @include margin-top(40px);
+            @extend %bg-white, %auto; 
+            max-width: 780px;
+            form{
+                @extend %flex, %align-items-center;
+                .left{  
+                    width: calc(100% - 120px);
+                    @include breakpoint(sm){
+                    width: calc(100% - 145px);
+
+                    }
+                    @extend %flex, %align-items-center, %justify-between;
+                    input{
+                        @extend %w-100;
+                        @include breakpoint(sm){
+                         width: calc(100% - 90px); 
+                        }                       
+                        @extend %flex, %align-items-center;
+                        @include padding(16.5px);
+                    }
+                    select{                        
+                        @include breakpoint(sm){
+                        width: 80px;
+                        margin-right: 10px;
+                        @include padding(16.5px);
+                        }
+                        @include breakpoint(max-sm){
+                        display: none;
+                        }
+                    }
+                }
+                .rihgt{
+                    width: 120px;  
+                    @include breakpoint(sm){
+                    width: 145px;  
+                    } 
+                    button{
+                        background: linear-gradient(99deg, #027df7 25.27%, #1a44f2 96.39%), #e8a41d;
+                        @extend %border-none-im, %white-color, %text-600;                        
+                        padding: 18px 31px;
+                        @include breakpoint(sm){
+                        padding: 18px 44px;
+                        }
+                        @include border-radius(0 5px 5px 0);                        
+                    }                 
+                }
+            }
+
+        }
+        .text{
+            @include margin-top(40px);
+            ul{
+                @extend %flex, %align-items-center, %justify-center, %pl-0-im;  
+                @include breakpoint(max-xxl){
+                 gap:10px 15px;
+                }                                         
+                li{ 
+                    @extend %text-700, %p-rel, %list-none;
+                    @include font-size(20px);
+                    color: #272727;                                     
+                    @include breakpoint(lg){
+                        @include padding-right(50px);
+                        @include margin-right(50px);
+                    }
+                    &:after{
+                        @extend %abs, %top-50;                          
+                        @include breakpoint(lg){
+                            left: 100%;
+                            width: 1px;
+                            height: 20px;
+                            background: #272727;
+                        }
+                        transform: translate(-50%, -50%); 
+                    }                 
+                    span{
+                        color: #70717B; 
+                        @include font-size(20px);
+                        @extend %ml-20;                       
+                    }
+                    &:last-child{
+                        &::after{
+                            @extend %width-ih-im, %bgtransprant-im;
+                        }
+                    }
+                }
+            }
+        }
+        &--innerpage3{
+            @include margin-top(0px); 
+            box-shadow: none;
+            @extend %bgtheme;
+            h3{
+                 @extend %white-color;   
+            }
+            .searchbar{
+                @include border-radius(6px);
+                box-shadow: none;
+                .rihgt{
+                   button{
+                    @include border-radius(6px);
+                   } 
+                }
+            }
+            .text{
+                ul{
+                    li{
+                        @extend %white-color-im;
+                        &::after{
+                            background: #fff !important;
+                        }
+                        span{
+                            @extend %white-color-im;  
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    &--page3{
+        @include padding-top(120px);
+    }
+}

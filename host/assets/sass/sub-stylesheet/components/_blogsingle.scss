@@ -1,0 +1,432 @@
+.blogsingle{
+
+    &__sidebar {
+        @extend %flex;
+        gap: 30px;
+        flex-direction: column;
+    } 
+    &__searchbar{
+        @include border-radius(4px);
+       form{
+        @extend %flex, %align-items-center;
+        @include padding(0 20px);
+        i{
+            width: 20px;
+        }
+        input{
+            width: calc(100% - 20px);
+            @include padding(12px 0);
+        }
+       } 
+    }
+    &__catagery{
+        @include padding(40px 30px);
+        @include border-radius(4px);
+        ul{
+            @extend %pl-0-im, %flex, %mt-20;
+            flex-direction: column;
+            gap: 15px;
+            li{
+                @extend %list-none, %flex,,%align-items-center,%justify-between;
+                .text{
+                    @extend %flex, %align-items-center;                   
+                    h6{
+                        a{
+                            @include font-size(16px);
+                            @extend %text-400, %text-decoration;
+                            color: #70717B;
+                        }
+                    }
+                }
+                .number{
+                    span{
+                        color: #70717B;
+                    }
+                }
+
+            }
+        }
+    }
+    &__popularpost {        
+        @include padding(40px);
+        @include border-radius(4px);
+        .postitem {
+            >ul {
+                @extend %pl-0, %flex, %mt-30;
+                flex-direction: column;
+                gap: 20px;
+                >li {
+                    @extend %flex,
+                    %align-items-center;
+                    gap: 15px;                      
+                    
+                    &:last-child{
+                        border-bottom: none;
+                        &:after{
+                        border-bottom: none;
+                        }
+                    }
+
+                    .thum {
+                        @extend %wd-85;                       
+                        
+                    }
+                    .content {
+                        width: calc(100% - 105px);
+                        h6{
+                            @include line-height(22px); 
+                            a {                                
+                                @include font-size(16px);  
+                                @include line-height(15px); 
+                                @extend %text-decoration;                               
+                                
+                            }
+                        }
+
+                        span {
+                            @extend %text-500, %mt-5, %d-inline-block;
+                            @include font-size(15px);
+
+                        }
+                    }
+                    &:hover{                        
+                        .content{
+                            h6{
+                                a{
+                                    color: #027DF7;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }        
+    }    
+
+    &__alltag {
+        @include padding(30px);
+        .alltaginner {  
+            @extend %mt-20;         
+            a {
+                background: #F6FAFE;
+                @extend %border-radius-4, %text-decoration,
+                %d-inline-block;
+                @include padding(10px 15px);
+                @include margin(5px);
+                color: #555;
+                @extend %text-400,
+                %text-capitalize;
+                transition: all .3s ease;
+                &:hover {
+                    color: $white-color;
+                      background: $theme;
+                }
+            }
+        }
+    }    
+    &__content {        
+        @extend  %p-rel;
+        @include breakpoint(md){
+            @include margin(-30px 15px 0 15px);
+        }
+        @include padding(10px 30px 30px 30px);
+        box-shadow: 0px 0px 10px 0px rgba(179, 181, 191, 0.30);
+        .heading{ 
+            @include padding(25px 0 15px 0);
+            h4{
+                @extend %mb-10;
+            }
+            ul {
+                @extend %flex,%mp-0-im;
+                @include margin-top(10px);
+                gap:10px 20px;
+                @include breakpoint(md){
+                gap: 60px;
+                }
+
+                li {
+                    @extend %text-capitalize,
+                    %text-400, %list-none;
+
+                    i {
+                        @extend %theme,
+                        %mr-10;
+                    }
+                }
+            }
+        }
+
+        p{
+           @include margin(8px 0 25px 0);
+        } 
+        .quode {
+            @include margin-top(35px);
+            .quode-inner {
+                @extend %border-radius-4; 
+                background: $theme;
+                @include padding(30px 10px); 
+
+                @include breakpoint(md){
+                    @include padding(30px 40px); 
+                }                
+                h6 {
+                    @extend  %white-color, %text-600, %text-center;
+                    font-style: italic;
+                    @include line-height(30px);                    
+                }
+            }
+            h5{
+                @include margin(30px 0 15px 0);
+            }
+            p {
+                @extend %mb-30, %mt-30;
+            }
+        }
+        .tagbutton-icon {
+            @extend %flex,
+            %align-items-center,%justify-between;
+            @include margin-top(40px);
+            .tagbutton {
+                ul {
+                    @extend %flex, %align-items-center, %mp-0-im;
+                    gap: 20px;
+                    @include breakpoint(esm){
+                     gap: 5px;
+                    }
+                    li {
+                        @extend %text-capitalize;
+                        @extend %list-none;
+                        a {
+                            border: 1px solid #F1F1F1;
+                            @include padding(5px 10px);
+                            color: #555;
+                            @extend %border-radius-4, %text-decoration;
+                            transition: all .3s ease;
+                            &:hover {
+                                color: $maintheme;
+                                border-color: $theme;
+                            }
+                        }
+
+                        &:first-child {
+                            @extend %text-color-im,
+                            %text-600;
+                        }
+                    }
+                }
+            }
+            .tagicon {                             
+                ul {
+                    @extend %flex, %align-items-center, %mp-0-im;
+                    gap: 10px;
+                    li {
+                        @extend %list-none;
+                        &:first-child {
+                            @extend %text-color-im,
+                            %text-600;
+                        }
+                        a {
+                            @extend %wd-30,
+                            %hd-30,                            
+                            %d-inline-block,
+                            %line-height-30,
+                            %text-center,
+                            %transition;
+                            @include border-radius(25px);
+                            i {
+                                @extend %white-color;
+                                @include font-size(15px);
+                            }                            
+                        }
+                        &:nth-child(2){
+                            a{
+                                background: $facebook;
+                            }
+                        }
+                        &:nth-child(3){
+                            a{
+                                background: $twitter;
+                            }
+                        }
+                        &:nth-child(4){
+                            a{
+                                background: $linkedin;
+                            }
+                        }
+                        &:nth-child(5){
+                            a{
+                                background: $youtube;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__author {            
+        @include padding(60px 0px 40px 0px);
+        h5{
+            @extend %mb-30;
+        }
+        .author-content {            
+            @extend %flex;
+            gap:15px 20px;
+            @include breakpoint(md){
+            gap: 30px;
+            }
+            .thum {
+                width: 120px;
+                height: 120px; 
+                img {
+                    @extend %w-100;
+                }
+            }
+            .text {
+                @include breakpoint(md){
+                    width: calc(100% - 150px);
+                }
+                h6 {
+                    @extend %mb-0-im;
+                }
+                span {
+                    @extend %text-400, %d-inline-block,
+                    %text-capitalize;
+                    @include margin-top(2px);
+                }
+                p {
+                    max-width: 600px;
+                    @extend %my-10;
+                }
+                ul {
+                    @extend %flex, %mp-0-im;
+                    @include margin-top(20px);
+                    gap: 20px;
+
+                    li {
+                        @extend %list-none;
+                        a {
+                            @extend %theme, %text-decoration;
+                            i {
+                                @include font-size(18px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__comments {        
+        @include padding(20px 0px);
+        h5{
+            @extend %mb-30;
+        }
+        .content {
+            ul {
+                @extend %flex, %mp-0-im;
+                gap: 40px;
+                @include breakpoint(md){
+                gap: 50px;
+                }
+                flex-direction: column;
+                li {
+                    @extend %flex;
+                    gap: 20px;
+                    .img {
+                        @extend %wd-80,
+                        %hd-80,
+                        %line-height-80;
+                        @include border-radius(40px);
+                        img {
+                            @extend %w-100;
+                        }
+                    }
+                    .commentsarea {
+                        @include breakpoint(md){
+                        width: calc(100% - 100px);
+                        }
+                        .name-replaybtn {
+                            @extend %flex,
+                            %justify-between;
+                            .name {
+                                h6 {
+                                    @extend %mb-0;
+                                }
+
+                                span {
+                                    @extend %text-400, %d-inline-block;
+                                    @include font-size(16px);
+                                    @include margin-top(2px);
+                                }
+                            }
+
+                            .replaybtn {
+                                a {
+                                    @extend %border-radius-4,
+                                    %white-color,
+                                    %text-capitalize,%text-decoration;
+                                    background: $theme;
+                                    @include padding(5px 20px);
+                                    margin-block: 10px 0;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        p {
+                            @extend %mt-10,
+                            %mb-0;
+                            max-width: 600px;
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        @include margin-left(12px);
+                        @include breakpoint(sm){
+                            @include margin-left(60px);
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    &__leavecoments {        
+        @include padding(60px 0px 30px 0px);
+        h5{
+            @extend %mb-30;
+        }
+        .formarea {
+            form {
+                .alliput {
+                    @extend %flex;
+                    gap: 20px;
+                    input {                       
+                        width: 100%; 
+                        @extend %bg-white;                                             
+                        @include breakpoint(lg){
+                        width: 48.6%;
+                        }
+                    }
+                    ::placeholder{
+                        color: #555; 
+                        @extend %text-400, %text-capitalize;
+                    }
+                }
+                textarea {
+                    @include margin-top(25px);
+                    @extend %bg-white;   
+                }
+
+                button {
+                    @include margin-top(40px);
+                    @extend %bgtransprant, %text-capitalize; 
+                                       
+                }
+            }
+        }
+    }
+}

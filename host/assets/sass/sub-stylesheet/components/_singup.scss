@@ -1,0 +1,97 @@
+.signup {
+    &__item {        
+      @extend %bg-white, %marauto;
+      max-width: 648px;    
+      @include padding(20px);
+      @include breakpoint(sm) {
+        @include padding(80px);
+      }
+      @include add-prefix(border-radius, 4px);
+      .topbtn {
+        @include padding-block(13px);
+        @include padding-inline(50px);
+        background: #4277f1;
+        @include add-prefix(border-radius, 6px);
+        @extend %flex, %justify-center;
+        .innrtop {
+          @extend %flex, %justify-center, %align-items-center;
+          i {
+            @extend %white-color, %mr-5;          
+            @include font-size(20px);
+          }
+         > p {
+            @extend %white-color, %mp-0-im;            
+            span {
+              @extend %text-700, %white-color;
+            }
+          }
+        }
+      }
+      .or {
+        @extend %flex, %justify-center, %mt-20;
+        h6 {
+          color: #9da1b4;
+          @extend %text-400, %mr-20, %ml-20;
+          @include font-size(18px);
+        }
+      }
+      .alliner {
+        .inneritem {
+          border: 1px solid #dbe7ff;
+          @include add-prefix(border-radius, 4px);
+          @extend %flex, %align-items-center, %mt-10, %pl-10;        
+          i {
+            width: 10px;            
+            @include font-size(20px);
+            @extend %pr-20;
+          }
+          input {
+            width: calc(100% - 30px);
+            @include padding(11px);
+          }
+        }
+        .checkedbox {
+          @extend %flex, %align-items-center, %justify-between, %mt-20;
+          .left {
+            @extend %flex, %align-items-center;
+            input {
+              width: 15px;
+            }
+            label {
+              width: calc(100% - 15px);
+              @extend %pl-5;
+            }
+          }
+          .right {
+            a {
+              color: #70717b;
+              @extend %text-decoration;
+            }
+          }
+        }
+      }
+      p {
+        max-width: 292px;
+        @extend %marauto, %text-center;
+        @include margin-top(35px);
+      }
+      .bottombtn {
+        @extend %mt-30, %flex, %justify-center;
+        button {
+          @include add-prefix(border-radius, 6px);
+          background: #4277f1;
+          @extend %flex, %justify-center, %white-color, %text-600, %border-none-im;
+          @include padding-inline(190px);
+          @include padding-block(13px);
+        }
+      }
+      .logintext{
+      @extend %flex, %justify-center, %mt-25;       
+        a{
+            @extend %ml-5, %text-600, %d-inline-block, %text-decoration;
+            color: #027DF7;
+        }
+      }
+    }
+}
+  

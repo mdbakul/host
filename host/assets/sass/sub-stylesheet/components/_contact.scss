@@ -1,0 +1,105 @@
+
+.contactdetails{
+    &__inner{
+        background: #F7F7F7;
+        @extend %text-center;
+        @include padding(40px 20px);
+        .thumb{
+            @extend %wd-80, %hd-80, %bgtheme, %line-height-80, %text-center, %auto;
+            @include border-radius(40px);
+            @include margin-bottom(20px);            
+        }
+        .text{
+            h6{
+                @include margin-bottom(20px);
+            } 
+            ul{
+                @extend %mp-0-im;
+                li{
+                    @extend %list-none;
+                    span{
+                        @extend %theme;
+                    }
+                }
+            }
+            
+        }
+    }   
+}
+
+
+.contactus{
+    @include padding-bottom(100px);
+    &__question{
+       background: #F7F7F7;       
+       @extend %text-center;       
+       @include padding(30px 20px);
+       @include breakpoint(sm){
+           @include padding(50px);
+       }
+    h6{
+        @extend %theme;
+    }
+    .form{
+        @include margin-top(50px);
+        form{
+            .allinput{
+                @extend %flex;
+                flex-direction: column;
+                gap: 20px;                
+                .input{
+                    @extend %flex;
+                    gap: 20px;
+                   input{
+                    border: 1px solid #E6E7E8;
+                    @extend %bg-white;
+                    @include breakpoint(lg){
+                     width: calc(100% / 2 - 10px);
+                    }
+                   } 
+                   select{
+                    @include padding(15px);
+                    @include breakpoint(lg){
+                     width: calc(100% / 2 - 10px);
+                    }
+                    &.form-select{
+                        box-shadow: none !important;
+                        border: 1px solid #E6E7E8;
+                        @include border-radius(0px);
+                        color: #555555;                        
+                    }
+                    ::placeholder{
+                    color: #555555; 
+                    }
+                   }
+                }
+                .textarea{
+                    textarea{
+                        @extend %bg-white;
+                        border: 1px solid #E6E7E8;                       
+                    } 
+                }
+            }
+            .contactbtn{
+                button{
+                    @extend %bg-white;
+                }
+            }
+        }
+    }
+    .contactbtn{
+        @include margin-top(50px);
+        button{
+            border: none;
+        }
+    }
+
+   } 
+}
+
+.map{    
+    iframe{
+        @extend %w-100;
+        min-height: 600px;
+    }
+}
